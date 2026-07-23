@@ -15,6 +15,17 @@
         <p>Kontak Sales : {{ $supplier->kontak_sales }}</p>
         <p>No telepon : {{ $supplier->no_telepon }}</p>
         <p>Alamat Perusahaan : {{ $supplier->alamat_perusahaan }}</p>
+        <br>
+        <form action="{{ route('edit_supplier', $supplier) }}" method="get">
+            @csrf
+            <button type="submit">Edit</button>
+        </form>
+        <br>
+        <form action="{{ route('delete_supplier', $supplier) }}" method="post">
+            @csrf
+            @method('delete')
+            <button type="submit" onclick="return confirm('Apakah anda yakin hapus?')">Delete</button>
+        </form>
         <hr>
     @endforeach
 </body>
