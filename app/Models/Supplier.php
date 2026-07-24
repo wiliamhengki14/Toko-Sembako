@@ -14,7 +14,7 @@ class Supplier extends Model
         'alamat_perusahaan',
     ];
     public function barangs() {
-        return $this->hasMany(Barang::class);
+        return $this->hasMany(Barang::class, 'id_supplier');
     }
     public function returs() {
         return $this->hasMany(Retur::class);

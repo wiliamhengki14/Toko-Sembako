@@ -30,5 +30,7 @@
         </select> <br> <br>
         <button type="submit">Tambah +</button>
     </form>
+    <br>
+    <a href="{{ route('index_barang') }}">Kembali</a>
 </body>
 </html>

@@ -23,3 +23,8 @@ Route::delete('/supplier/{supplier}/delete', [supplierController::class, 'delete
 // Barang
 Route::get('/barang/create', [barangController::class, 'create_barang'])->name('create_barang');
 Route::post('/barang/store', [barangController::class, 'store_barang'])->name('store_barang');
+Route::get('/barang', [barangController::class, 'index_barang'])->name('index_barang');
+Route::get('/barang/{barang}/show', [barangController::class, 'show_barang'])->name('show_barang');
+Route::get('/barang/{barang}/edit', [barangController::class, 'edit_barang'])->name('edit_barang');
+Route::patch('/barang/{barang}/edit/update', [barangController::class, 'update_barang'])->name('update_barang');
+Route::delete('/barang/{barang}/delete', [barangController::class,'delete_barang'])->name('delete_barang');

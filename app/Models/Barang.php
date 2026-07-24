@@ -23,6 +23,6 @@ class Barang extends Model
         return $this->hasMany(Retur::class);
     }
     public function supplier() {
-        return $this->belongsTo(Supplier::class);
+        return $this->belongsTo(Supplier::class, 'id_supplier');
     }
 }
